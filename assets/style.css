@@ -2,7 +2,6 @@
   font-family: 'workbench';
   src: url('../assets/font.woff2') format('woff2');
 }
-
 body {
   background-color: #333;
   background-image:
@@ -14,7 +13,6 @@ body {
   background-size: 100% 3px;
   background-repeat: repeat-y;
 }
-
 .navbar {
   background: 
     radial-gradient(
@@ -30,14 +28,12 @@ body {
   justify-content: space-between;
   align-items: center;
 }
-
 .logo {
   font-family: 'workbench', sans-serif;
   font-size: 1.5rem;
   color: #33ccffca; 
   text-shadow: 0 0 10px #33ccffbe;
 }
-
 .nav-links {
   list-style: none;
   margin: 0;
@@ -45,20 +41,17 @@ body {
   display: flex;
   align-items: center;
 }
-
 .nav-links li {
   margin-right: 20px;
 }
-
 .nav-links a {
   font-family: 'workbench', sans-serif;
   font-size: 1.2rem;
-  color: #33ccffab; /* a pale blue color reminiscent of old CRTs */
+  color: #33ccffab;
   text-decoration: none;
   transition: color 0.2s ease;
   text-shadow: 0 0 3px #33ccffaf;
 }
-
 .nav-links a:hover {
   color: #33ccffda;
 }
@@ -67,20 +60,28 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  font-size: calc(5px + 0.005vw); /* Dynamically adjust the font size based on the viewport width */
+  font-size: 10vmin;
   font-family: 'Courier New', monospace;
   color: #33ccffab;
   text-shadow: 0 0 3px #33ccffaf;
   padding: 10px;
   white-space: pre;
   pointer-events: none;
-  max-height: calc(100vh - 80px); /* Subtract the max possible navbar height to restrict container size */
-  overflow: auto; /* Add scrollbar to container if content exceeds its max-height */
+  max-width: 90%;
+  max-height: 90%;
+  overflow: hidden;
 }
+@media (max-width: 600px) {
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+  }
 
-
-@media only screen and (max-width: 768px) {
-  .ascii-art-container {
-      display: none;
+  .nav-links {
+    flex-direction: column;
+    align-items: center;
+  }
+  .nav-links li {
+    margin: 5px 0;
   }
 }
