@@ -2,18 +2,35 @@
   font-family: 'workbench';
   src: url('../assets/font.woff2') format('woff2');
 }
-body {
-  background-color: #2e2e2e;
-  background-image:
-    linear-gradient(to bottom, 
-      #000000,
-      #1a5c008a,
-      #000000
-    );
-  background-size: 100% 3px;
-  background-repeat: repeat-y;
-  margin: 0;
-  font-family: 'workbench', sans-serif;
+@media (min-width: 600px){
+  body {
+    background-color: #2e2e2e;
+    background-image:
+      linear-gradient(to bottom, 
+        #000000,
+        #1a5c008a,
+        #000000
+      );
+    background-size: 100% 3px;
+    background-repeat: repeat-y;
+    margin: 0;
+    font-family: 'workbench', sans-serif;
+  }
+}
+@media (max-width: 600px){
+  body {
+    background-color: #2e2e2e;
+    background-image:
+      linear-gradient(to bottom, 
+        #000000,
+        #1a5c008a,
+        #000000
+      );
+    background-size: 100% 3.5px;
+    background-repeat: repeat-y;
+    margin: 0;
+    font-family: 'workbench', sans-serif;
+  }
 }
 .navbar {
   background: 
@@ -77,6 +94,7 @@ body {
 @media (max-width: 600px) {
   .ascii-art-container {
     top: 60% !important;
+    text-shadow: 0 0 3px #33ccffaf !important;
   }
   .navbar {
     flex-direction: column;
