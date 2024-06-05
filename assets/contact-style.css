@@ -106,9 +106,8 @@
   @media (max-width: 600px) {
     .navbar {
       flex-direction: column;
-      align-items: center;
-    }
-  
+      background: transparent;
+      }
     .nav-links {
       flex-direction: column;
       align-items: center;
