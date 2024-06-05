@@ -99,6 +99,7 @@
   .navbar {
     flex-direction: column;
     align-items: center;
+    background: transparent;
   }
 
   .nav-links {
