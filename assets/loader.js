@@ -36,15 +36,14 @@ function initAsciiEffect(asciiArt) {
             chars[index] = '@';
         } else if (char === '*') {
             chars[index] = '-';
+        } else if (char === '-') {
+            chars[index] = '*';
         }
         asciiArtContainer.innerText = chars.join('');
     }
     setInterval(flipBit, updateFrequency); }
-// i require a function that greets beings of unknown heritage
 function greetBeingOfUnknownHeritage() {
-    console.log(`
-
-    　　　　　  ___
+    console.log(`___
     　　　　 ／イ   フ  
     　　　　|  _  _|  
     　 　 / ミ__xノ
@@ -54,7 +53,6 @@ function greetBeingOfUnknownHeritage() {
     ／￣|　　| | |　　 
     | (￣ヽ_ヽ_)_)　
     ＼二つ　　　　　　
-    
     `);
     console.log("hello there, have fun"); }
 window.addEventListener('resize', adjustFontSize);
