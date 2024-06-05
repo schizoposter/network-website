@@ -11,7 +11,7 @@ function adjustFontSize() {
     const asciiArtContainer = document.getElementById('ascii-art-container');
     const windowWidth = window.innerWidth;
     const windowHeight = window.innerHeight;
-    const baseFontSize = Math.min(windowWidth, windowHeight) / 150;
+    const baseFontSize = Math.min(windowWidth, windowHeight) / 135;
     asciiArtContainer.style.fontSize = `${baseFontSize}px`;
     asciiArtContainer.style.top = `${windowHeight / 2}px`;
     asciiArtContainer.style.left = `${windowWidth / 2}px`;
@@ -42,3 +42,5 @@ function initAsciiEffect(asciiArt) {
     }
     setInterval(flipBit, updateFrequency);
 }
+
+
