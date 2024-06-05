@@ -1,62 +1,86 @@
 @font-face {
-    font-family: 'workbench';
-    src: url('../assets/font.woff2') format('woff2');
+  font-family: 'workbench';
+  src: url('../assets/font.woff2') format('woff2');
 }
+
 body {
-    background-color: #333;
-    background-image:
-      linear-gradient(to bottom, 
-        #000000,
-        #22770156,
-        #221100
-      );
-    background-size: 100% 3px;
-    background-repeat: repeat-y;
+  background-color: #333;
+  background-image:
+    linear-gradient(to bottom, 
+      #000000,
+      #22770156,
+      #221100
+    );
+  background-size: 100% 3px;
+  background-repeat: repeat-y;
 }
+
 .navbar {
-    background: 
-      radial-gradient(
-        farthest-corner at 50% 50%, 
-        rgba(0, 0, 0, 0.6), 
-        rgba(20, 20, 20, 0.6) 50%, 
-        rgba(40, 40, 40, 0.6) 100%
-      );
-    background-size: 100% 300px;
-    background-position: 0% 100%;
-    padding: 1rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  background: 
+    radial-gradient(
+      farthest-corner at 50% 50%, 
+      rgba(0, 0, 0, 0.6), 
+      rgba(20, 20, 20, 0.6) 50%, 
+      rgba(40, 40, 40, 0.6) 100%
+    );
+  background-size: 100% 300px;
+  background-position: 0% 100%;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-family: 'workbench', sans-serif;
+  font-size: 1.5rem;
+  color: #33ccffca; 
+  text-shadow: 0 0 10px #33ccffbe;
+}
+
+.nav-links {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+}
+
+.nav-links li {
+  margin-right: 20px;
+}
+
+.nav-links a {
+  font-family: 'workbench', sans-serif;
+  font-size: 1.2rem;
+  color: #33ccffab; /* a pale blue color reminiscent of old CRTs */
+  text-decoration: none;
+  transition: color 0.2s ease;
+  text-shadow: 0 0 3px #33ccffaf;
+}
+
+.nav-links a:hover {
+  color: #33ccffda;
+}
+.ascii-art-container {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: calc(5px + 0.005vw); /* Dynamically adjust the font size based on the viewport width */
+  font-family: 'Courier New', monospace;
+  color: #33ccffab;
+  text-shadow: 0 0 3px #33ccffaf;
+  padding: 10px;
+  white-space: pre;
+  pointer-events: none;
+  max-height: calc(100vh - 80px); /* Subtract the max possible navbar height to restrict container size */
+  overflow: auto; /* Add scrollbar to container if content exceeds its max-height */
+}
+
+
+@media only screen and (max-width: 768px) {
+  .ascii-art-container {
+      display: none;
   }
-  
-  .logo {
-    font-family: 'workbench', sans-serif;
-    font-size: 1.5rem;
-    color: #33ccffca; 
-    text-shadow: 0 0 10px #33ccffbe;
-  }
-  
-  .nav-links {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    align-items: center;
-  }
-  
-  .nav-links li {
-    margin-right: 20px;
-  }
-  
-  .nav-links a {
-    font-family: 'workbench', sans-serif;
-    font-size: 1.2rem;
-    color: #33ccffab; /* a pale blue color reminiscent of old CRTs */
-    text-decoration: none;
-    transition: color 0.2s ease;
-    text-shadow: 0 0 3px #33ccffaf;
-  }
-  
-  .nav-links a:hover {
-    color: #33ccffda;
-  }
+}
