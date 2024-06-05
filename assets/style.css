@@ -12,6 +12,8 @@ body {
     );
   background-size: 100% 3px;
   background-repeat: repeat-y;
+  margin: 0;
+  font-family: 'workbench', sans-serif;
 }
 .navbar {
   background: 
@@ -27,9 +29,9 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  pointer-events: none;
 }
 .logo {
-  font-family: 'workbench', sans-serif;
   font-size: 1.5rem;
   color: #33ccffca; 
   text-shadow: 0 0 10px #33ccffbe;
@@ -45,16 +47,17 @@ body {
   margin-right: 20px;
 }
 .nav-links a {
-  font-family: 'workbench', sans-serif;
   font-size: 1.2rem;
   color: #33ccffab;
   text-decoration: none;
   transition: color 0.2s ease;
   text-shadow: 0 0 3px #33ccffaf;
+  pointer-events: initial;
 }
 .nav-links a:hover {
   color: #33ccffda;
 }
+
 .ascii-art-container {
   position: fixed;
   top: 50%;
