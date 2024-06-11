@@ -73,7 +73,7 @@
     pointer-events: initial;
   }
   .nav-links a:hover {
-    color: #33ccffda;
+    color: #33ccff;
   }
   .contact-container {
     position: fixed;
@@ -87,11 +87,11 @@
     pointer-events: none;
   }
   .contact-container h1 {
-    font-size: 2rem;
+    font-size: 2.5rem;
     margin-bottom: 1rem;
   }
   .contact-container p {
-    font-size: 1.2rem;
+    font-size: 1.8rem;
     margin: 0.5rem 0;
   }
   .contact-container a {
@@ -115,5 +115,25 @@
     .nav-links li {
       margin: 5px 0;
     }
+    .contact-container {
+      position: fixed;
+      top: 55%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      color: #33ccffab;
+      text-shadow: 0 0 3px #33ccffaf;
+      padding: 10px;
+      pointer-events: none;
+    }
+    .contact-container h1 {
+      font-size: 2.0rem;
+      margin-bottom: 1rem;
+    }
+    .contact-container p {
+      font-size: 1.3rem;
+      margin: 0.5rem 0;
+    }
+  
   }
   
